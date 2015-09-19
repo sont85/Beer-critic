@@ -4,5 +4,9 @@ header {
 }
 
 #beerContainer {
-  height: auto;
+  height: 960px;
+}
+.beer-div {
+  border: 2px solid black;
+  cursor: pointer;
 }

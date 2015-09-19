@@ -1,4 +1,12 @@
 header {
-  background: url("../images/hero-bg.jpg"); }
+  background: url("../images/hero-bg.jpg");
+  background-size: cover; }
+
+#beerContainer {
+  height: 960px; }
+
+.beer-div {
+  border: 2px solid black;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
