@@ -2,22 +2,28 @@ var $;
 require(['dom', 'untappd'], function(dom, untappd) {
   'use strict';
   $(document).ready(function(){
-    init();
-    new WOW().init();
     function init() {
       var $searchInput = $('#searchInput');
-      var $searchBtn = $('#searchBtn');
-      var $beerContainer = $('#beerContainer');
-      $searchBtn.click(function() {
+
+      $('#searchBtn').on('click', function() {
         var beerName = $searchInput.val();
-        var searchResult = untappd.search(beerName, function(data){
-          console.log(data);
+        $searchInput.val("");
+        untappd.search(beerName, function(data){
+          console.log(data.response.beers.items);
           dom.buildSearch(data.response.beers.items);
         });
       });
-      $beerContainer.on('click','.beer-div', function() {
-        console.log($(this).data('bid'));
+
+      $('#beerContainer').on('click','.beer-div', function() {
+        var beerId = $(this).data('bid');
+        untappd.info(beerId, function(data){
+          dom.buildInfo(data.response.beer);
+        });
       });
     }
+
+    init();
+    new WOW().init();
+    $('.search').removeClass('wow slideInLeft');
   });
 });

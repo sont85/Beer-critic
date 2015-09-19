@@ -12,14 +12,11 @@ define(function(){
     }, cb);
   }
 
-  function info(beerId) {
+  function info(beerId, cb) {
     $.getJSON(baseUrl + 'beer/info/'+ beerId,{
       client_id: client_id,
       client_secret: client_secret
-    }, function(data){
-      console.log(data.response);
-      dom.buildInfo(data.response);
-    });
+    }, cb);
   }
   return {
     search: search,

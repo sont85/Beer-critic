@@ -7,23 +7,24 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
   <link rel='stylesheet' href='css/style.css'></link>
 </head>
 
 <body>
   <header>
     <div class='container'>
+      <h1 class='lead'>Beer Critic</h1>
+      <div class='wow slideInLeft search'>
+        <input class='form-control' id='searchInput' placeholder='Beer Name'>
+        <button class='btn btn-default' id='searchBtn'>Find</button>
+      </div>
       <div class="row">
-        <div class='col-sm-3'>
-          <div class='wow slideInLeft'>
-            <input id='searchInput' placeholder='Beer Name'>
-            <div>
-              <button id='searchBtn'>Find</button>
-            </div>
-          </div>
+        <div class='col-sm-4'>
+          <div id='beerInfo'></div>
         </div>
-        <div class='col-sm-9'>
-          <div id='beerContainer'>
+        <div class='col-sm-8'>
+          <div id='beerContainer' class='multiple-items'>
           </div>
         </div>
       </div>
@@ -33,6 +34,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js'></script>
   <script src='./js/wow.min.js'></script>
   <script data-main='js/main' src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js'></script>
 </body>

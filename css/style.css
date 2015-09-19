@@ -1,12 +1,30 @@
-header {
-  background: url("../images/hero-bg.jpg");
-  background-size: cover; }
-
-#beerContainer {
-  height: 960px; }
-
 .beer-div {
-  border: 2px solid black;
   cursor: pointer; }
+
+.beer-div img {
+  height: 200px; }
+
+.slick-prev, .slick-next {
+  font-size: 15px;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  margin-top: -10px;
+  padding: 0;
+  cursor: pointer;
+  color: green;
+  border: none;
+  outline: none;
+  background: transparent; }
+
+.slick-prev {
+  left: -60px; }
+
+.slick-next {
+  right: -35px; }
+
+beer-div {
+  background: #333; }
 
 /*# sourceMappingURL=style.css.map */
