@@ -21,10 +21,13 @@ header .search {
   color: white;
   padding: 10px;
 }
+
 .beer-div {
   background: #ddd;
+  padding: 10px;
   margin: 2px;
   cursor: pointer;
+  height: 350px;
 }
 .beer-div img {
   height: 200px;
@@ -45,10 +48,18 @@ header .search {
   background: transparent;
 }
 .slick-prev {
-  left: -60px;
+  left: -80px;
   color: white;
+  width: 80px;
+  height: 2em;
+  border: 2px solid white;
+  border-radius: 15px;
 }
 .slick-next {
-  right: -35px;
+  right: -65px;
   color: white;
+  width: 60px;
+  height: 2em;
+  border: 2px solid white;
+  border-radius: 15px;
 }

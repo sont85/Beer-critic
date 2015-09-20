@@ -7,7 +7,7 @@ require(['dom', 'untappd'], function(dom, untappd) {
 
       $('#searchBtn').on('click', function() {
         var beerName = $searchInput.val();
-        $searchInput.val("");
+        $searchInput.val('');
         untappd.search(beerName, function(data){
           console.log(data.response.beers.items);
           dom.buildSearch(data.response.beers.items);
@@ -24,6 +24,6 @@ require(['dom', 'untappd'], function(dom, untappd) {
 
     init();
     new WOW().init();
-    $('.search').removeClass('wow slideInLeft');
+    $('header .wow').removeClass('wow slideInLeft');
   });
 });

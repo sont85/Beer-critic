@@ -21,8 +21,10 @@ header .search {
 
 .beer-div {
   background: #ddd;
+  padding: 10px;
   margin: 2px;
-  cursor: pointer; }
+  cursor: pointer;
+  height: 350px; }
 
 .beer-div img {
   height: 200px; }
@@ -43,11 +45,19 @@ header .search {
   background: transparent; }
 
 .slick-prev {
-  left: -60px;
-  color: white; }
+  left: -80px;
+  color: white;
+  width: 80px;
+  height: 2em;
+  border: 2px solid white;
+  border-radius: 15px; }
 
 .slick-next {
-  right: -35px;
-  color: white; }
+  right: -65px;
+  color: white;
+  width: 60px;
+  height: 2em;
+  border: 2px solid white;
+  border-radius: 15px; }
 
 /*# sourceMappingURL=style.css.map */
