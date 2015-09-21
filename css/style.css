@@ -1,5 +1,6 @@
 body {
-  background: url("../images/hero-bg.jpg"); }
+  background: url("../images/hero-bg.jpg");
+  background-size: cover; }
 
 header .title {
   font-size: 40px;
