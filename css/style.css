@@ -1,6 +1,7 @@
 body {
   background: url("../images/hero-bg.jpg");
-  background-size: cover; }
+  background-size: cover;
+  min-height: 720px; }
 
 header .title {
   font-size: 40px;
@@ -25,7 +26,8 @@ header input:focus {
 
 #beerInfo.border {
   border: 2px solid #DDD;
-  box-shadow: 2px 2px 2px #333; }
+  box-shadow: 2px 2px 2px #333;
+  margin-bottom: 20px; }
 
 #beerInfo .beer-name {
   font-size: 28px; }
