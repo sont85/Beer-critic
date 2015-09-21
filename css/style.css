@@ -31,7 +31,14 @@ header input:focus {
   font-size: 28px; }
 
 #beerInfo h5 {
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: lighter;
+  letter-spacing: 3px; }
+
+#beerInfo p {
+  letter-spacing: 1.5px;
+  font-style: oblique;
+  color: #CCC; }
 
 #beerContainer h5 {
   color: #777; }
