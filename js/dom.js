@@ -1,8 +1,6 @@
 var $;
 define(function() {
   'use strict';
-  var $wrap = $('#beerContainer');
-  var $beerInfo = $('#beerInfo');
   function carousel() {
     $('.responsive').slick({
       dots: false,
@@ -33,10 +31,10 @@ define(function() {
       }]
     });
   }
-
+  var $wrap = $('#beerContainer');
   function buildSearch(beerArray) {
     $wrap.empty();
-    var html = beerArray.map(function(item) {
+    var beerHtml = beerArray.map(function(item) {
       var $beerLabel = $('<img>').attr('src', item.beer.beer_label).addClass('center-block');
       var $beerName = $('<h4>').text(item.beer.beer_name).addClass('beer-name');
       var $beerStyle = $('<h5>').text('Style: ' + item.beer.beer_style);
@@ -45,16 +43,19 @@ define(function() {
       $beerDiv.append($beerLabel).append($beerName).append($brewery).append($beerStyle);
       return $beerDiv;
     });
-    $wrap.append(html);
+    var $slick = $('<div>').addClass('responsive');
+    $slick.append(beerHtml);
+    $wrap.append($slick);
     carousel();
   }
+  var $beerInfo = $('#beerInfo');
 
   function buildInfo(beer) {
     $beerInfo.empty();
-    var $name = $('<h4>').text(beer.beer_name);
-    var $abv = $('<h4>').text('Alcohol Content: ' + beer.beer_abv + '%');
-    var $ratingScore = $('<h4>').text('Rating Avg: ' + beer.rating_score);
-    var $ratingCount = $('<h4>').text('Rarting Count: ' + beer.rating_count);
+    var $name = $('<h4>').text(beer.beer_name).addClass('beer-name');
+    var $abv = $('<h5>').text('Alcohol Content: ' + beer.beer_abv + '%');
+    var $ratingScore = $('<h5>').text('Rating Avg: ' + beer.rating_score);
+    var $ratingCount = $('<h5>').text('Rarting Count: ' + beer.rating_count);
     var $description = $('<p>').text(beer.beer_description);
     var $img = $('<img>').attr('src', beer.beer_label);
     $beerInfo.append($img).append($name).append($abv).append($ratingScore).append($ratingCount).append($description);

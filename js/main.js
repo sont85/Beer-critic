@@ -6,6 +6,7 @@ require(['dom', 'untappd'], function(dom, untappd) {
       var $searchInput = $('#searchInput');
 
       $('#searchBtn').on('click', function() {
+        event.preventDefault();
         var beerName = $searchInput.val();
         $searchInput.val('');
         untappd.search(beerName, function(data){

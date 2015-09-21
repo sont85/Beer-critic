@@ -17,12 +17,14 @@
       <h1 class='title'>Beer Lookup</h1>
       <div class='row'>
         <div class='col-md-8 col-md-offset-2 wow slideInLeft'>
-          <div class='search input-group'>
-            <input class='form-control' id='searchInput' placeholder='Beer Name' data-container="body" data-toggle="popover" data-placement="bottom" data-content="Beer Not Found">
-            <span class='input-group-btn'>
-              <button class='btn btn-default' id='searchBtn'>Find</button>
-            </span>
-          </div>
+          <form>
+            <div class='search input-group'>
+              <input class='form-control' id='searchInput' placeholder='Beer Name' data-container="body" data-toggle="popover" data-placement="bottom" data-content="Beer Not Found">
+              <span class='input-group-btn'>
+                <button class='btn btn-default' id='searchBtn' type='submit'>Find</button>
+              </span>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -33,7 +35,7 @@
         <div id='beerInfo'></div>
       </div>
       <div class='col-sm-8'>
-        <div id='beerContainer' class='multiple-items responsive'>
+        <div id='beerContainer'>
         </div>
       </div>
     </div>
