@@ -1,3 +1,17 @@
+$hoverColor : green;
+@mixin slick($width) {
+  width: $width;
+  font-size: 15px;
+  position: absolute;
+  bottom: -30px;
+  display: block;
+  color: white;
+  height: 2em;
+  border: 2px solid white;
+  background: transparent;
+  border-radius: 15px;
+}
+
 body {
   background: url("../images/hero-bg.jpg");
 }
@@ -17,13 +31,19 @@ header .search {
     border-radius: 15px;
   };
 }
+header input:focus  {
+  border: 2px solid green !important;
+}
 #beerInfo {
   color: white;
   padding: 10px;
 }
-
+#beerInfo.border {
+  border: 2px solid #DDD;
+  box-shadow: 2px 2px 2px #333;
+}
 .beer-div {
-  background: #ddd;
+  background: #bca;
   padding: 10px;
   margin: 2px;
   cursor: pointer;
@@ -32,34 +52,18 @@ header .search {
 .beer-div img {
   height: 200px;
 }
-.slick-prev,
-.slick-next {
-  font-size: 15px;
-  line-height: 0;
-  position: absolute;
-  bottom: -30px;
-  display: block;
-  margin-top: -10px;
-  padding: 0;
-  cursor: pointer;
-  color: green;
-  border: none;
-  outline: none;
-  background: transparent;
-}
+
 .slick-prev {
-  left: 0px;
-  color: white;
-  width: 80px;
-  height: 2em;
-  border: 2px solid white;
-  border-radius: 15px;
+  @include slick(80px);
+  left: 0;
 }
 .slick-next {
-  right: 0px;
-  color: white;
-  width: 60px;
-  height: 2em;
-  border: 2px solid white;
-  border-radius: 15px;
+  @include slick(60px);
+  right: 0;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  border: 2px solid $hoverColor;
+  color: $hoverColor;
 }

@@ -15,12 +15,19 @@ header .search {
   header .search button {
     border-radius: 15px; }
 
+header input:focus {
+  border: 2px solid green !important; }
+
 #beerInfo {
   color: white;
   padding: 10px; }
 
+#beerInfo.border {
+  border: 2px solid #DDD;
+  box-shadow: 2px 2px 2px #333; }
+
 .beer-div {
-  background: #ddd;
+  background: #bca;
   padding: 10px;
   margin: 2px;
   cursor: pointer;
@@ -29,35 +36,35 @@ header .search {
 .beer-div img {
   height: 200px; }
 
-.slick-prev,
-.slick-next {
+.slick-prev {
+  width: 80px;
   font-size: 15px;
-  line-height: 0;
   position: absolute;
   bottom: -30px;
   display: block;
-  margin-top: -10px;
-  padding: 0;
-  cursor: pointer;
-  color: green;
-  border: none;
-  outline: none;
-  background: transparent; }
-
-.slick-prev {
-  left: 0px;
   color: white;
-  width: 80px;
   height: 2em;
   border: 2px solid white;
-  border-radius: 15px; }
+  background: transparent;
+  border-radius: 15px;
+  left: 0; }
 
 .slick-next {
-  right: 0px;
-  color: white;
   width: 60px;
+  font-size: 15px;
+  position: absolute;
+  bottom: -30px;
+  display: block;
+  color: white;
   height: 2em;
   border: 2px solid white;
-  border-radius: 15px; }
+  background: transparent;
+  border-radius: 15px;
+  right: 0; }
+
+.slick-prev:hover,
+.slick-next:hover {
+  border: 2px solid green;
+  color: green; }
 
 /*# sourceMappingURL=style.css.map */

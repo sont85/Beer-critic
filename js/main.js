@@ -9,19 +9,22 @@ require(['dom', 'untappd'], function(dom, untappd) {
         var beerName = $searchInput.val();
         $searchInput.val('');
         untappd.search(beerName, function(data){
-          console.log(data.response.beers.items);
-          dom.buildSearch(data.response.beers.items);
+          if (data.response.beers.count) {
+            dom.buildSearch(data.response.beers.items);
+          } else {
+            $('#searchInput').popover('show');
+          }
         });
       });
 
       $('#beerContainer').on('click','.beer-div', function() {
+        $('#searchInput').popover('hide');
         var beerId = $(this).data('bid');
         untappd.info(beerId, function(data){
           dom.buildInfo(data.response.beer);
         });
       });
     }
-
     init();
     new WOW().init();
     $('header .wow').removeClass('wow slideInLeft');

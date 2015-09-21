@@ -45,22 +45,20 @@ define(function() {
       $beerDiv.append($beerLabel).append($beerName).append($brewery).append($beerStyle);
       return $beerDiv;
     });
-    console.log(html);
     $wrap.append(html);
     carousel();
   }
 
   function buildInfo(beer) {
-    console.log(beer);
     $beerInfo.empty();
     var $name = $('<h4>').text(beer.beer_name);
     var $abv = $('<h4>').text('Alcohol Content: ' + beer.beer_abv + '%');
     var $ratingScore = $('<h4>').text('Rating Avg: ' + beer.rating_score);
     var $ratingCount = $('<h4>').text('Rarting Count: ' + beer.rating_count);
     var $description = $('<p>').text(beer.beer_description);
-    var $img = $('<img>').attr('src', beer.beer_label).addClass('text-center');
+    var $img = $('<img>').attr('src', beer.beer_label);
     $beerInfo.append($img).append($name).append($abv).append($ratingScore).append($ratingCount).append($description);
-    $beerInfo.addClass('wow bounceInUp');
+    $beerInfo.addClass('wow bounceInUp border');
     new WOW().init();
   }
 
