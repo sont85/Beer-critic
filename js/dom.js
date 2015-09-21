@@ -56,9 +56,11 @@ define(function() {
     var $abv = $('<h5>').text('Alcohol Content: ' + beer.beer_abv + '%');
     var $ratingScore = $('<h5>').text('Rating Avg: ' + beer.rating_score.toFixed(2));
     var $ratingCount = $('<h5>').text('Rating Count: ' + beer.rating_count);
+    var $location = $('<h5>').text(beer.brewery.location.brewery_city + ', ' + beer.brewery.location.brewery_state);
+    var $contact = $('<a>').attr('href', beer.brewery.contact.url).text(beer.brewery.contact.url);
     var $description = $('<p>').text(beer.beer_description);
     var $img = $('<img>').attr('src', beer.beer_label);
-    $beerInfo.append($img).append($name).append($abv).append($ratingScore).append($ratingCount).append($description);
+    $beerInfo.append($img).append($name).append($abv).append($ratingScore).append($ratingCount).append($location).append($contact).append($description);
     $beerInfo.addClass('wow bounceInUp border');
     new WOW().init();
   }
